@@ -1,0 +1,11 @@
+* {
+    font-family: Verdana;
+}
+
+#question {
+    font-size: 15pt;
+}
+
+.button {
+    display: inline-block;
+}
