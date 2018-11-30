@@ -45,14 +45,14 @@ class Question{
 
 for q in questions:
 	# print(q.question)
-	file.write(f"questions.append(new Question(\"{q.question}\"));"+"\n")
+	file.write(f"questions.push(new Question(\"{q.question}\"));"+"\n")
 	for o in q.options:
 		if q.options.index(o) == q.good_option_index:
 			# print("\t\t" + o)
-			file.write(f"questions[-1].options.append(\"{o}\");"+"\n")
+			file.write(f"questions[-1].options.push(\"{o}\");"+"\n")
 			file.write(f"questions[-1].good_option_index = {q.good_option_index};"+"\n")
 		else:
 			# print("\t" + o)
-			file.write(f"questions[-1].options.append(\"{o}\");"+"\n")
+			file.write(f"questions[-1].options.push(\"{o}\");"+"\n")
 
 print(".Done..")
