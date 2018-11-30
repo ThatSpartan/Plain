@@ -45,7 +45,7 @@ class Question{
 
 for q in questions:
 	# print(q.question)
-	file.write(f"questions.append(Question(\"{q.question}\"));"+"\n")
+	file.write(f"questions.append(new Question(\"{q.question}\"));"+"\n")
 	for o in q.options:
 		if q.options.index(o) == q.good_option_index:
 			# print("\t\t" + o)
