@@ -51,10 +51,10 @@ for q in questions:
 	for o in q.options:
 		if q.options.index(o) == q.good_option_index:
 			# print("\t\t" + o)
-			file.write(f"questions[questions.length-1].options.push(\"{o}\");"+"\n")
+			file.write(f"questions[questions.length-1].options.push(\"{o[2:]}\");"+"\n")
 			file.write(f"questions[questions.length-1].good_option_index = {q.good_option_index};"+"\n")
 		else:
 			# print("\t" + o)
-			file.write(f"questions[questions.length-1].options.push(\"{o}\");"+"\n")
+			file.write(f"questions[questions.length-1].options.push(\"{o[1:]}\");"+"\n")
 
 print(".Done..")
