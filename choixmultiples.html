@@ -13,7 +13,7 @@
 
     <div id="menu_bar">
         <a href="vraioufaux.html" class="button button_menu" id="vraioufaux">Vrai ou Faux</a>
-        <a href="choixmultiples.html" class="button button_menu" id="choixmultiples">Choix Multiples</a>
+        <a class="button button_menu" id="choixmultiples">Choix Multiples</a>
     </div>
 
     <h1>Questions</h1>
@@ -21,14 +21,16 @@
     <div id="questions_container">
         <h4 id="question">Hello</h4>
     <div>
-    <div id="buttons_container">
-        <button class="button" id="true" onclick="true_call()">True</button>
-        <button class="button" id="false" onclick="false_call()">False</button>
+
+    <!-- TODO: add container for options -->
+    <div id="choix_container">
+
     </div>
 
     <div id="animation"></div>
 
-    <script src="script_forVraiOuFaux.js"></script>
+    <script src="gestion_choix_multiple.js"></script>
+    <script src="script_forChoixMultiples.js"></script>
 </body>
 
 </html>
