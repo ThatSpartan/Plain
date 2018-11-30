@@ -56,6 +56,7 @@ function false_call() {
 }
 
 const anim_con = document.getElementById("animation");
+
 function play_animation(g) {
     if (g) {
         anim_con.innerHTML = "Bravo";
@@ -70,7 +71,7 @@ function new_question() {
     } else {
         play_animation(false);
     }
-    
+
     i++;
     question_element.innerHTML = questions[i][0];
 }
