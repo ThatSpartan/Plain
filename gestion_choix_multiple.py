@@ -38,21 +38,23 @@ class Question{
 	constructor(question) {
 		this.question = question;
 		this.options = [];
-		this.good_option_index = None;
+		this.good_option_index = null;
 	}
 }
+let q;
 """)
 
 for q in questions:
 	# print(q.question)
-	file.write(f"questions.push(new Question(\"{q.question}\"));"+"\n")
+	file.write(f"q = new Question(\"{q.question}\");")
+	file.write(f"questions.push(q);"+"\n")
 	for o in q.options:
 		if q.options.index(o) == q.good_option_index:
 			# print("\t\t" + o)
-			file.write(f"questions[-1].options.push(\"{o}\");"+"\n")
-			file.write(f"questions[-1].good_option_index = {q.good_option_index};"+"\n")
+			file.write(f"questions[questions.length-1].options.push(\"{o}\");"+"\n")
+			file.write(f"questions[questions.length-1].good_option_index = {q.good_option_index};"+"\n")
 		else:
 			# print("\t" + o)
-			file.write(f"questions[-1].options.push(\"{o}\");"+"\n")
+			file.write(f"questions[questions.length-1].options.push(\"{o}\");"+"\n")
 
 print(".Done..")
